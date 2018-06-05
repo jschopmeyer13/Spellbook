@@ -1,49 +1,29 @@
-console.log('testing')
+const form = document.querySelector('form')
 
-const button = document.querySelector('button')
+const changeHeading = function(ev) {
+  ev.preventDefault()
 
-function changeCourse() {
-  const heading = document.querySelector('.spell')
-  if(heading.textContent === 'Potions'){
-      heading.textContent = 'Defense';
-  }
-  else if(heading.textContent === 'Defense'){
-    heading.textContent = 'Spellbook';
-  }
-  else{
-    heading.textContent = 'Potions';
-  }
-}
-function changeName(){
-  const name = document.querySelector('.name')
-  if(name.textContent === 'Ron'){
-    name.textContent = 'Harry';
-  }
-  else{
-    name.textContent = 'Ron'
-  }
+  const f = ev.target;
+  const spellName = f.spellName.value;
+  const level = f.level.value;
+  const spellsDiv = document.querySelector('#spells');
+
+  spellsDiv.innerHTML += `<li>${spellName + '- level ' + level}</li>`
+
+  f.reset()
 }
 
+// const addStudents = function(ev){
+//     ev.preventDefault()
 
-function changeHeader(){
-  const x = document.getElementById("frm1");
-  let text = "";
-  text += x.elements[0].value
-  document.getElementById("change").innerHTML = text;
-}
+//     const f = ev.target
+//     const studentName = f.studentName.value
+    
+//     const studentsDiv = document.querySelector('#students')
+//     studentsDiv.innerHTML += `<li>${studentName}</li>`
+    
+//     f.reset()
+// }
 
 
-document.getElementById('first').addEventListener('click', changeCourse);
-document.getElementById('second').addEventListener('click', changeName);
-document.getElementById('third').addEventListener('click', changeHeader);
-
-
-document.getElementById("word").addEventListener("keyup", function(e){
-  e.preventDefault();
-  const key = e.keyCode;
-  if(key===13){
-    document.getElementById("change").innerHTML = document.getElementById("word").value;
-    return true;
-  }
-});
-
+form.addEventListener('submit', changeHeading)
