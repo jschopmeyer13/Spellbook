@@ -22,15 +22,20 @@ function changeHeader(){
   let text = "";
   text += x.elements[0].value
   document.getElementById("change").innerHTML = text;
-
 }
 
-document.getElementById('first').addEventListener('click', changeCourse)
-document.getElementById('second').addEventListener('click', changeName)
-document.getElementById('third').addEventListener('click', changeHeader)
-document.getElementById('change').addEventListener('keyup', function(event){
-  event.preventDefault();
-  if(event.keyCode === 13){
-    document.getElementById('third').click();
+
+document.getElementById('first').addEventListener('click', changeCourse);
+document.getElementById('second').addEventListener('click', changeName);
+document.getElementById('third').addEventListener('click', changeHeader);
+
+
+document.getElementById("word").addEventListener("keyup", function(e){
+  e.preventDefault();
+  const key = e.keyCode;
+  if(key===13){
+    document.getElementById("change").innerHTML = document.getElementById("word").value;
+    return true;
   }
 });
+
