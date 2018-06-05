@@ -1,0 +1,27 @@
+html{
+    background-color: cornsilk;
+}
+.spell{
+    text-align: center;
+    color: navy;
+}
+.name{
+    text-align: left;
+    color: maroon;
+}
+#first{
+    background-color: navy;
+    border-color: navy;
+    color: white;
+}
+#first:hover{
+    color: darkgrey;
+}
+#second{
+    background-color: maroon;
+    border-color: maroon;
+    color: white;
+}
+#second:hover{
+    color: darkgrey;
+}
