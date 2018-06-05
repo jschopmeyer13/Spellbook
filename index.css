@@ -10,6 +10,13 @@ body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+span.spellName{
+  color: red;
+}
+span.level{
+  color: blue;
+}
+
 img#skull {
   position: absolute;
   right: 5vw;
