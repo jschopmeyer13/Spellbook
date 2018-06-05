@@ -1,18 +1,31 @@
 const form = document.querySelector('form')
 
-const changeHeading = function(ev) {
-  ev.preventDefault()
+// const changeHeading = function(ev) {
+//   ev.preventDefault()
+
+//   const f = ev.target;
+//   const spellName = f.spellName.value;
+//   const level = f.level.value;
+//   const spellsDiv = document.querySelector('#spells');
+
+//   spellsDiv.innerHTML += `<li>${spellName + '- level ' + level}</li>`
+
+//   f.reset()
+// }
+const addElements = function(ev){
+  ev.preventDefault();
 
   const f = ev.target;
   const spellName = f.spellName.value;
   const level = f.level.value;
-  const spellsDiv = document.querySelector('#spells');
+  let node = document.createElement('LI');
+  let textNode = document.createTextNode(spellName + ' - level ' + level);
 
-  spellsDiv.innerHTML += `<li>${spellName + '- level ' + level}</li>`
+  node.appendChild(textNode);
+  document.getElementById("spells").appendChild(node);
 
-  f.reset()
+  f.reset();
 }
-
 // const addStudents = function(ev){
 //     ev.preventDefault()
 
@@ -26,4 +39,4 @@ const changeHeading = function(ev) {
 // }
 
 
-form.addEventListener('submit', changeHeading)
+form.addEventListener('submit', addElements)
