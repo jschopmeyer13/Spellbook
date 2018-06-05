@@ -1,8 +1,15 @@
-html{
+body{
     background-color: cornsilk;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+    padding-bottom: 60px;
 }
-.spell{
+header{
     text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.spell{
     color: navy;
 }
 .name{
@@ -10,18 +17,37 @@ html{
     color: maroon;
 }
 #first{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: navy;
     border-color: navy;
     color: white;
+    border-radius: 5px;
+    
 }
 #first:hover{
     color: darkgrey;
 }
 #second{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: maroon;
     border-color: maroon;
     color: white;
+    border-radius: 5px;
+    
 }
 #second:hover{
     color: darkgrey;
+}
+#word{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    float: left;
+    margin-right: 10px;
+}
+#third{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;   
+}
+#third:hover{
+    background-color: darkgrey;
+    border-color: darkgrey;
 }

@@ -5,15 +5,23 @@ const button = document.querySelector('button')
 function changeCourse() {
   const heading = document.querySelector('.spell')
   if(heading.textContent === 'Potions'){
-      heading.textContent = 'Defense'
+      heading.textContent = 'Defense';
+  }
+  else if(heading.textContent === 'Defense'){
+    heading.textContent = 'Spellbook';
   }
   else{
-    heading.textContent = 'Potions'
+    heading.textContent = 'Potions';
   }
 }
 function changeName(){
   const name = document.querySelector('.name')
-  name.textContent = 'Ron'
+  if(name.textContent === 'Ron'){
+    name.textContent = 'Harry';
+  }
+  else{
+    name.textContent = 'Ron'
+  }
 }
 
 
