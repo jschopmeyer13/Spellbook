@@ -28,3 +28,9 @@ function changeHeader(){
 document.getElementById('first').addEventListener('click', changeCourse)
 document.getElementById('second').addEventListener('click', changeName)
 document.getElementById('third').addEventListener('click', changeHeader)
+document.getElementById('change').addEventListener('keyup', function(event){
+  event.preventDefault();
+  if(event.keyCode === 13){
+    document.getElementById('third').click();
+  }
+});
