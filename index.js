@@ -39,10 +39,12 @@ const addElements = function(ev){
  // node.appendChild(spanNode);
   //node.appendChild(textNode);
   const brk = document.createElement('br');
+  levelItem.appendChild(brk);
   //node.appendChild(brk)
   //document.getElementById("types").appendChild(node);
   document.getElementById('types').appendChild(spellItem);
   document.getElementById('types').appendChild(levelItem);
+  
   //document.getElementById("spellName").appendChild(spellNode);
   
 
