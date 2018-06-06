@@ -29,9 +29,9 @@ const addElements = function(ev){
   spellItem.className = "spellName";
   levelItem.className = "level";
 
-  let textNode = document.createTextNode(spellName + ' - level ' + level);
+ // let textNode = document.createTextNode(spellName + ' - level ' + level);
   
-  const spellNode = document.createTextNode(spellName);
+  const spellNode = document.createTextNode(spellName + '   ');
 
   const levelNode = document.createTextNode(level);
   spellItem.appendChild(spellNode);
