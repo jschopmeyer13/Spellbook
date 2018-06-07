@@ -41,17 +41,13 @@ const app = {
     
     delButton.addEventListener('click', function(){
       const list = document.getElementById('spells');
-      
-      while(list.hasChildNodes()){
-      
-        list.removeChild(list.firstChild);
+      console.log(this.parentNode)
+      while(this.parentNode !== null && this.parentNode.hasChildNodes){
+        item.removeChild(this.parentNode.firstChild)
       }
-     // item.removeChild(this);
-      //item.removeChild(document.getElementsByClassName(''))
-     //removeProperty(this);
+ 
     
     })
-    //item += document.createElement("button");
     return item
   },
 
