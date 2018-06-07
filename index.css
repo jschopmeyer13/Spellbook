@@ -156,14 +156,26 @@ input.small {
 .level {
   color: red;
 }
-.deleteButton{
+
+button.delete {
+  background-color: #ff3333;
+  color: white;
+}
+
+button.fav {
+  background-color: #F8BE3D;
   color: black;
-  font-family: "Homemade Apple", cursive;
-  background-color: wheat;
-  border-radius: 10px;
-  width: 60px;
-  height: 30px;
-  margin-top: 15px;
-  background-position: center;
-  
+}
+
+button.move {
+  background-color: #3366FF;
+  color: white;
+}
+
+.template {
+  display: none;
+}
+
+.spell.fav {
+  background-color: goldenrod;
 }
