@@ -3,8 +3,11 @@ const app = {
   init: function() {
     const form = document.querySelector('form')
     form.addEventListener('submit', ev => { // defining a new function but it is defining this how we expect it
+      //document.getElementsByClassName("spellName").focus();
       this.handleSubmit(ev)
+      
     })
+    
   },
 
   renderProperty: function(name, value) {
@@ -42,8 +45,10 @@ const app = {
     delButton.addEventListener('click', function(){
       while(this.parentNode !== null && this.parentNode.hasChildNodes){
         for(let i = 0; i < arr.length; i++){
-          if(arr[i] === this.parentNode.firstChild.textContent){
-            arr.pop(arr[i]);
+          //console.log("delete this: " + this.parentNode.firstChild.innerHTML)
+          if(arr[i] === this.parentNode.firstChild.innerHTML){
+            //console.log("actuall item being deleted" + arr[i]);
+            arr.splice(i, 1);
             console.log(arr);
           }
         }
@@ -73,8 +78,9 @@ const app = {
 
     const list = document.querySelector('#spells')
     list.appendChild(item)
-
-    f.reset()
+    
+    f.reset();
+    //document.getElementsByClassName("spellName").focus();
   },
 }
 
