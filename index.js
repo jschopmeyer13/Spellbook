@@ -40,8 +40,6 @@ const app = {
     delButton.className = 'deleteButton';
     
     delButton.addEventListener('click', function(){
-      console.log(item)
-      //const list = document.getElementById('spells');
       while(this.parentNode !== null && this.parentNode.hasChildNodes){
         for(let i = 0; i < arr.length; i++){
           if(arr[i] === this.parentNode.firstChild.textContent){
@@ -51,6 +49,7 @@ const app = {
         }
         item.removeChild(this.parentNode.firstChild)
       }
+      console.log(item);
  
     
     })
